@@ -13,10 +13,14 @@ HTTP_SERVER.use(bodyParser.json());
 
 // BASIC SERVER CONFIS
 const port = 5000;
-
-HTTP_SERVER.listen(port, "localhost", () => {
-  console.log("SERVER STARTED IN THE PORT", port);
+HTTP_SERVER.listen(PORT, "0.0.0.0", (err) => {
+  if (err) throw err;
+  console.log(`Listening on PORT ${PORT}`);
 });
+
+// HTTP_SERVER.listen(port, "localhost", () => {
+//   console.log("SERVER STARTED IN THE PORT", port);
+// });
 
 //INJECTING API SERVER
 HTTP_SERVER.use("/", require("./app"));
