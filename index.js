@@ -13,9 +13,9 @@ HTTP_SERVER.use(bodyParser.json());
 
 // BASIC SERVER CONFIS
 const port = 5000;
-HTTP_SERVER.listen(PORT, "0.0.0.0", (err) => {
+HTTP_SERVER.listen(port, "0.0.0.0", (err) => {
   if (err) throw err;
-  console.log(`Listening on PORT ${PORT}`);
+  console.log(`Listening on PORT ${port}`);
 });
 
 // HTTP_SERVER.listen(port, "localhost", () => {
